@@ -1,15 +1,6 @@
-local LocalPlayer = game:GetService("Players").LocalPlayer
-
-local function Invincibility()
-    if LocalPlayer.Character then
-        for i, v in pairs(LocalPlayer.Character:GetChildren()) do
-            if v.Name == "hitbox" then
-                v:Destroy()
-            end
-        end
-    end
-end
-
-while wait(0.5) do
-    Invincibility(LocalPlayer)
+function giveInfiniteStats()
+  player = getPlayer()  -- get the player object
+  player.health = math.huge  -- set the player's health to infinity
+  player.mana = math.huge  -- set the player's mana to infinity
+  player.stamina = math.huge  -- set the player's stamina to infinity
 end
